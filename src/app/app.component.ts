@@ -25,9 +25,10 @@ export class AppComponent implements OnInit {
 
   /***/
   onSubmit() {
+    const { form: { value: formValueSnap } } = this;
     console.log(this.someModel);
     // this.form.reset();
-    this.form.resetForm();
+    this.form.reset(formValueSnap);
     // this.someModel = {dt: new Date(), num: 123, str: 'str'};
   }
 
